@@ -2,6 +2,8 @@ var disclaimer = document.querySelector('.disclaimer')
 var bdayCard = document.querySelector('.bday-card')
 var video = document.querySelector('.video')
 video.classList.add('hide')
+var msg = document.querySelector('.msg')
+msg.classList.add('hide')
 
 if (window.innerWidth < 1000) {
     disclaimer.classList.add('hide')
@@ -30,9 +32,9 @@ function checkAdi(e){
     }
 }
 
+var music = new Audio()
 function displayCard() {
 
-    var music = new Audio()
     music.src = "./imgs/Happy Birthday English 2.mp3"
     music.play()
     disclaimer.classList.add('hide')
@@ -44,6 +46,19 @@ function displayCard() {
 }
 
 function displayVideo() {
+
+    music.pause()
+
     bdayCard.classList.remove('show')
     video.classList.add('show')
+
+    var lvl3 = document.querySelector('#lvl3')
+    lvl3.addEventListener('click', displayMsg)
+}
+
+function displayMsg() {
+    
+    video.classList.remove('show')
+    msg.classList.add('show')
+
 }

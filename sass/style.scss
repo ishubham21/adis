@@ -30,7 +30,10 @@ body{
         font-weight: 600;
         margin: 15px auto;
     }
-    #lvl1{
+    
+}
+
+form{
         width: 100%;
 
         input, button{
@@ -58,7 +61,6 @@ body{
                 color: #fff
             }
         }
-    }
 }
 audio{
     width: 0;
@@ -92,6 +94,7 @@ audio{
         background-color: #007bff;
         right: 40px;
         bottom: 40px;
+        cursor: pointer;
 }
 @keyframes forImg{
     0%{
@@ -127,6 +130,12 @@ audio{
     }
 }
 
+.msg{
+    width: 60%;
+}
+.prompt{
+    width: 100%;
+}
 
 .hide{
     display: none!important;
