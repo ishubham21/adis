@@ -87,6 +87,10 @@ body {
   color: #fff;
 }
 
+audio {
+  width: 0;
+}
+
 .bday-card {
   height: 100vh;
   display: none;
@@ -187,9 +191,9 @@ body {
 }
 
 .video video {
+  border-radius: 15px;
   display: block;
-  width: 80%;
-  margin: auto;
+  width: 60%;
 }
 
 .hide {
@@ -197,6 +201,8 @@ body {
 }
 
 .show {
-  display: block !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 /*# sourceMappingURL=style.css.map */

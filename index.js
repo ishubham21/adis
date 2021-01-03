@@ -22,7 +22,7 @@ function checkAdi(e){
     var finalName = nameUser.toLowerCase()
 
     if (finalName === 'aditi' || finalName === 'adi' || finalName === 'aditi jha') {
-        alert('Aao aao beta ji! Yeh OK dikh rha hai?...ise click kro.')
+        alert('Aao aao beta ji! Yeh OK dikh rha hai?...ise click kro. Aur HEADPHONES LE AAO')
         displayCard()
     }
     else{
@@ -31,11 +31,16 @@ function checkAdi(e){
 }
 
 function displayCard() {
+
+    var music = new Audio()
+    music.src = "./imgs/Happy Birthday English 2.mp3"
+    music.play()
     disclaimer.classList.add('hide')
     bdayCard.classList.add('show')
 
     var lvl2 = document.querySelector('#lvl2')
     lvl2.addEventListener('click', displayVideo)
+
 }
 
 function displayVideo() {

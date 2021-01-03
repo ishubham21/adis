@@ -60,6 +60,9 @@ body{
         }
     }
 }
+audio{
+    width: 0;
+}
 .bday-card{
     height: 100vh;
     display: none;
@@ -118,9 +121,9 @@ body{
     justify-content: center;
     align-items: center;
     video{
+        border-radius: 15px;
         display: block;
-        width: 80%;
-        margin: auto;
+        width: 60%;
     }
 }
 
@@ -129,5 +132,5 @@ body{
     display: none!important;
 }
 .show{
-    display: block!important;
+    display: flex!important;
 }
