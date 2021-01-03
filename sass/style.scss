@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Redressed&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    overflow-x: hidden;
+    background-color: #f9c1b1;
+    background-image: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.disclaimer{
+    animation: fadeIn 1.5s 0s ease;
+    background-color: #fff;
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #777;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px #444;
+    text-align: center;
+    h2{
+        font-weight: 600;
+        margin: 15px auto;
+    }
+    #lvl1{
+        width: 100%;
+
+        input, button{
+            display: block;
+            padding: 10px 5px;
+            border-radius: 5px;
+            border: 0;
+            margin: 10px auto;
+        }
+        input{
+            border: 0.5px solid #444;
+            width: 100%;
+            &::placeholder{
+                text-align: center;
+            }
+        }
+        button{
+            background-color: #fff;
+            border: 1px solid #444;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: 0.4s;
+            &:hover{
+                background-color: #444;
+                color: #fff
+            }
+        }
+    }
+}
+.bday-card{
+    height: 100vh;
+    display: none;
+    position: relative;
+}
+.bday-img{
+    background: none;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        cursor: pointer;
+        border-radius: 20px;
+        max-width: 60%;
+        animation: forImg 1.2s 0s ease-in;
+    }
+}
+.next-btn{
+    position: absolute;
+        padding: 15px 10px;
+        border-radius: 10px;
+        border: 0;
+        color: #fff;
+        background-color: #007bff;
+        right: 40px;
+        bottom: 40px;
+}
+@keyframes forImg{
+    0%{
+        transform: translate(15em, 0) scale(0.2);
+        opacity: 0.3;
+    }
+    100%{
+        transform: translate(0,0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.video{
+    display: block;
+    height: 60vh;
+    padding: 5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    video{
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+
+.hide{
+    display: none!important;
+}
+.show{
+    display: block!important;
+}

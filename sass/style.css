@@ -1,1 +1,202 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Redressed&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  overflow-x: hidden;
+  background-color: #f9c1b1;
+  background-image: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.disclaimer {
+  -webkit-animation: fadeIn 1.5s 0s ease;
+          animation: fadeIn 1.5s 0s ease;
+  background-color: #fff;
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #777;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 3px #444;
+          box-shadow: 5px 5px 3px #444;
+  text-align: center;
+}
+
+.disclaimer h2 {
+  font-weight: 600;
+  margin: 15px auto;
+}
+
+.disclaimer #lvl1 {
+  width: 100%;
+}
+
+.disclaimer #lvl1 input, .disclaimer #lvl1 button {
+  display: block;
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: 0;
+  margin: 10px auto;
+}
+
+.disclaimer #lvl1 input {
+  border: 0.5px solid #444;
+  width: 100%;
+}
+
+.disclaimer #lvl1 input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.disclaimer #lvl1 input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.disclaimer #lvl1 input::-ms-input-placeholder {
+  text-align: center;
+}
+
+.disclaimer #lvl1 input::placeholder {
+  text-align: center;
+}
+
+.disclaimer #lvl1 button {
+  background-color: #fff;
+  border: 1px solid #444;
+  padding: 10px 15px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.disclaimer #lvl1 button:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.bday-card {
+  height: 100vh;
+  display: none;
+  position: relative;
+}
+
+.bday-img {
+  background: none;
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bday-img img {
+  cursor: pointer;
+  border-radius: 20px;
+  max-width: 60%;
+  -webkit-animation: forImg 1.2s 0s ease-in;
+          animation: forImg 1.2s 0s ease-in;
+}
+
+.next-btn {
+  position: absolute;
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: 0;
+  color: #fff;
+  background-color: #007bff;
+  right: 40px;
+  bottom: 40px;
+}
+
+@-webkit-keyframes forImg {
+  0% {
+    -webkit-transform: translate(15em, 0) scale(0.2);
+            transform: translate(15em, 0) scale(0.2);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes forImg {
+  0% {
+    -webkit-transform: translate(15em, 0) scale(0.2);
+            transform: translate(15em, 0) scale(0.2);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) scale(1);
+            transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.video {
+  display: block;
+  height: 60vh;
+  padding: 5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video video {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+/*# sourceMappingURL=style.css.map */
