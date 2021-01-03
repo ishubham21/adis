@@ -143,3 +143,22 @@ audio{
 .show{
     display: flex!important;
 }
+
+.msg-final{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    margin: auto;
+    padding: 0px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 2em;
+    animation: fadeIn 0.8s 0s ease;
+    p{
+        padding: 30px;
+        font-size: 18px;
+    }
+}

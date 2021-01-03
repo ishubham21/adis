@@ -214,4 +214,26 @@ audio {
   display: -ms-flexbox !important;
   display: flex !important;
 }
+
+.msg-final {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999;
+  margin: auto;
+  padding: 0px;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 15px;
+  line-height: 2em;
+  -webkit-animation: fadeIn 0.8s 0s ease;
+          animation: fadeIn 0.8s 0s ease;
+}
+
+.msg-final p {
+  padding: 30px;
+  font-size: 18px;
+}
 /*# sourceMappingURL=style.css.map */

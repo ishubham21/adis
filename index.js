@@ -1,9 +1,23 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyBtW8UqCbZYLWOZrQR0evyEUxXtlgkNev0",
+    authDomain: "bday-adi.firebaseapp.com",
+    databaseURL: "https://bday-adi-default-rtdb.firebaseio.com",
+    projectId: "bday-adi",
+    storageBucket: "bday-adi.appspot.com",
+    messagingSenderId: "9943303641",
+    appId: "1:9943303641:web:9798a6d36fadb49c32c5c8"
+};
+// Initialize Firebase
+
+
 var disclaimer = document.querySelector('.disclaimer')
 var bdayCard = document.querySelector('.bday-card')
 var video = document.querySelector('.video')
 video.classList.add('hide')
 var msg = document.querySelector('.msg')
 msg.classList.add('hide')
+var msgF = document.querySelector('.msg-final')
+msgF.classList.add('hide')
 
 if (window.innerWidth < 1000) {
     disclaimer.classList.add('hide')
@@ -57,8 +71,43 @@ function displayVideo() {
 }
 
 function displayMsg() {
-    
     video.classList.remove('show')
     msg.classList.add('show')
 
+    var promptForm = document.querySelector('.promptForm')
+    promptForm.addEventListener('submit', checkDay)
+}
+
+function checkDay(e){
+    e.preventDefault()
+    var day = document.querySelector('#check').value
+    var realDay = day.toLowerCase()
+
+    if (realDay === 'thursday') {
+        callFirebase()
+    }
+    else{
+        alert('Nhi yaad? Bhddhuuu :(')
+    }
+}
+
+function callFirebase(){
+    firebase.initializeApp(firebaseConfig);
+
+    var msgRef = firebase.database().ref("msg/");
+
+    msgRef.on("child_added", function (data, prevChildKey) {
+        var newMsg = data.val();
+        printFinalMsg(newMsg.message);
+    })
+}
+
+function printFinalMsg(msg){
+    var audio = new Audio()
+    audio.src = './imgs/cheer2.mp3'
+    audio.play()
+    msgF.classList.add('show')
+
+    var finalTxt = document.querySelector('.finalMsg')
+    finalTxt.innerHTML = msg
 }
